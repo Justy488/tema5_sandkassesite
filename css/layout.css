@@ -1,0 +1,26 @@
+/* LAYOUT FOR HEADER AND FOOTER */
+footer {
+  display: grid;
+  gap: 10px;
+}
+header nav,
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav > * {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header ul {
+  height: 100%;
+  width: clamp(175px, 50%, 300px);
+}
+footer ul {
+  flex-direction: column;
+  padding-left: 1rem;
+}
