@@ -1,12 +1,9 @@
 /* LAYOUT FOR HEADER AND FOOTER */
 footer {
-  display: grid;
   gap: 10px;
 }
 header nav,
 footer nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 header nav > * {
@@ -23,4 +20,75 @@ header ul {
 footer ul {
   flex-direction: column;
   padding-left: 1rem;
+}
+
+/* tekst grid */
+@media (min-width: 768px) {
+  .image-text-section {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; billede venstre, tekst højre */
+    align-items: center;
+    gap: 40px;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: grid;
+    grid-row: span 2;
+  }
+}
+
+/* LAYOUT FOR GRID SYSTEM */
+.layerd-elements {
+  display: grid;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+/* 4-kolonne grid */
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Stor top-venstre boks der fylder 2 kolonner og 2 rækker */
+.box01 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.box01 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Top-højre billede fylder 2 kolonner */
+.box02 {
+  grid-column: span 2;
+}
+.box02 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nederste 2 billeder — normal størrelse */
+.box03 img,
+.box04 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (width > 600px) {
+  .layerd-elements {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
 }

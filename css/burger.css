@@ -44,6 +44,7 @@
   }
   nav.active .menu {
     display: block;
+    align-items: flex-end;
     background-color: var(--color-menu-bg);
     position: absolute;
     top: 3.6rem;
